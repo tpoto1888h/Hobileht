@@ -4,11 +4,25 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #443530;
+  --bg-color: #f1e7dd;
+  --text-color: #f1e7dd;
+
+  --accent-col-red: #e3170a;
+  --accent-col-green: #497537;
+  --accent-col-yellow: #f7b32b;
+
+  --darker-variant-red: #b00b01;
+  --darker-variant-green: #2b4f1c;
+  --darker-variant-yellow: #b78113;
+}
+
 html,
 body {
   font-family: "Vidaloka", "Asul";
   line-height: 2em;
-  background-color: #f1e7dd;
+  background-color: var(--bg-color);
 }
 
 /* Sidebar menu */
@@ -19,7 +33,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #443530;
+  background-color: var(--primary-color);
   overflow-x: hidden;
   padding-top: 20px;
   outline: 1px solid #584641;
@@ -35,13 +49,13 @@ body {
 }
 
 .sidenav a:hover {
-  color: #f1e7dd;
+  color: var(--text-color);
 }
 
 /* Pealkiri- Sissejuhatus ja Ajalugu */
 .title-box {
   width: 100%;
-  background-color: #443530;
+  background-color: var(--primary-color);
   padding: 35px 35px;
 }
 
@@ -49,7 +63,7 @@ body {
   font-family: "Vidaloka", serif;
   text-align: center;
   font-size: 36px;
-  color: #f1e7dd;
+  color: var(--text-color);
   letter-spacing: 2px;
 }
 
@@ -58,10 +72,10 @@ body {
   width: 900px;
   height: 100px;
   padding: 25px;
-  border: 5px solid #443530;
-  margin: 80px 0px 0px 420px;
-  background-color: #443530;
-  color: #f1e7dd;
+  border: 3px solid var(--darker-variant-yellow);
+  margin: 80px 0px 0px 460px;
+  background-color: var(--accent-col-yellow);
+  color: var(--primary-color);
   font-family: "Vidaloka";
   font-size: 36px;
   text-align: center;
@@ -72,22 +86,60 @@ body {
   width: 900px;
   height: auto;
   padding: 35px;
-  border: 5px solid #443530;
-  margin: 80px 0px 0px 420px;
-  background-color: #443530;
-  color: #f1e7dd;
+  border: 3px solid var(--darker-variant-yellow);
+  margin: 80px 0px 0px 460px;
+  background-color: var(--accent-col-yellow);
+  color: var(--primary-color);
   font-family: "Vidaloka";
   font-size: 24px;
   text-align: left;
   letter-spacing: 2px;
 }
 
-.introduction-box img {
-  float: right;
-  margin-right: 220px;
+.container-images {
+  display: grid;
+  grid-template-columns: 980px 800px;
+  grid-template-rows: 600px;
+  gap: 80px;
+  margin-left: 460px;
   margin-top: -550px;
+  align-items: start;
+}
+
+/* Pieta top-right */
+.mourning-christ {
+  grid-column: 2;
+  grid-row: 1;
   width: 800px;
-  height: 518.33;
+  height: 558px;
   border-radius: 10px;
-  box-shadow: 0px 10px 20px #443530;
+  box-shadow: 0px 0px 10px var(--darker-variant-yellow);
+}
+
+/* orpheus and Eurydice bottom-left */
+.land-orph-eury {
+  grid-column: 1;
+  grid-row: 2;
+  width: 900px;
+  height: 518px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px var(--darker-variant-red);
+}
+
+/* River landscape bottom-right */
+.river-landscape {
+  grid-column: 2;
+  grid-row: 2;
+  width: 800px;
+  height: 518px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px var(--darker-variant-green);
+}
+
+.pieta-text-changes {
+  color: var(--accent-col-green);
+}
+
+.pieta-text-changes a {
+  color: var(--darker-variant-green);
 }
