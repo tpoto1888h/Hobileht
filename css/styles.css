@@ -53,13 +53,13 @@ body {
 }
 
 /* Pealkiri- Sissejuhatus ja Ajalugu */
-.title-box {
+.title-box-sa {
   width: 100%;
   background-color: var(--primary-color);
   padding: 35px 35px;
 }
 
-.title-box h3 {
+.title-box-sa h3 {
   font-family: "Vidaloka", serif;
   text-align: center;
   font-size: 36px;
@@ -96,7 +96,7 @@ body {
   letter-spacing: 2px;
 }
 
-.container-images {
+.container-images-int {
   display: grid;
   grid-template-columns: 980px 800px;
   grid-template-rows: 600px;
@@ -106,8 +106,8 @@ body {
   align-items: start;
 }
 
-/* Pieta top-right */
-.mourning-christ {
+/* Pieta maal üleval paremal */
+.mourning-christ-img {
   grid-column: 2;
   grid-row: 1;
   width: 800px;
@@ -116,8 +116,8 @@ body {
   box-shadow: 0px 0px 10px var(--darker-variant-yellow);
 }
 
-/* orpheus and Eurydice bottom-left */
-.land-orph-eury {
+/* orpheus and Eurydice maal all vasakul */
+.land-orph-eury-img {
   grid-column: 1;
   grid-row: 2;
   width: 900px;
@@ -126,8 +126,8 @@ body {
   box-shadow: 0px 0px 10px var(--darker-variant-red);
 }
 
-/* River landscape bottom-right */
-.river-landscape {
+/* River landscape maal all paremal */
+.river-landscape-img {
   grid-column: 2;
   grid-row: 2;
   width: 800px;
@@ -136,10 +136,178 @@ body {
   box-shadow: 0px 0px 10px var(--darker-variant-green);
 }
 
-.pieta-text-changes {
+/* Viited linkide ja värviga */
+
+.pieta-text-change {
+  color: var(--accent-col-yellow);
+}
+
+.pieta-text-change a {
+  color: var(--darker-variant-yellow);
+}
+
+.orph-eury-text-change {
+  color: var(--accent-col-red);
+}
+
+.orph-eury-text-change a {
+  color: var(--darker-variant-red);
+}
+
+.river-text-change {
   color: var(--accent-col-green);
 }
 
-.pieta-text-changes a {
+.river-text-change {
   color: var(--darker-variant-green);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
