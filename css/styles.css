@@ -48,7 +48,20 @@ body {
   font-family: "Vidaloka";
 }
 
+.sidenav h3 {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #a39589;
+  display: block;
+  font-family: "Vidaloka";
+}
+
 .sidenav a:hover {
+  color: var(--text-color);
+}
+
+.sidenav h3:hover {
   color: var(--text-color);
 }
 
@@ -67,7 +80,7 @@ body {
   letter-spacing: 2px;
 }
 
-/* Sissejuhatus- Tekst, pildid */
+/* Sissejuhatuse kast koos teksti ja piltidega */
 .introduction-box h3 {
   width: 900px;
   height: 100px;
@@ -90,54 +103,41 @@ body {
   margin: 80px 0px 0px 460px;
   background-color: var(--accent-col-yellow);
   color: var(--primary-color);
-  font-family: "Vidaloka";
+  font-family: "Asul";
   font-size: 24px;
   text-align: left;
   letter-spacing: 2px;
 }
 
+/* Piltide paigutamine ning viidete alla lisamine */
 .container-images-int {
   display: grid;
-  grid-template-columns: 980px 800px;
-  grid-template-rows: 600px;
-  gap: 80px;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 100px;
   margin-left: 460px;
-  margin-top: -550px;
+  margin-top: -545px;
   align-items: start;
 }
 
-/* Pieta maal üleval paremal */
-.mourning-christ-img {
-  grid-column: 2;
-  grid-row: 1;
-  width: 800px;
-  height: 558px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px var(--darker-variant-yellow);
+.change-text-int {
+  display: flex;
+  flex-direction: column;
 }
 
-/* orpheus and Eurydice maal all vasakul */
-.land-orph-eury-img {
-  grid-column: 1;
-  grid-row: 2;
+.change-text-int img {
   width: 900px;
-  height: 518px;
+  height: 550px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px var(--darker-variant-red);
 }
 
-/* River landscape maal all paremal */
-.river-landscape-img {
-  grid-column: 2;
-  grid-row: 2;
-  width: 800px;
-  height: 518px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px var(--darker-variant-green);
+.pieta-text-change,
+.orph-eury-text-change,
+.river-text-change {
+  margin-top: 5px;
+  text-align: left;
 }
 
 /* Viited linkide ja värviga */
-
 .pieta-text-change {
   color: var(--accent-col-yellow);
 }
@@ -158,156 +158,189 @@ body {
   color: var(--accent-col-green);
 }
 
-.river-text-change {
+.river-text-change a {
   color: var(--darker-variant-green);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Pieta üleval paremal */
+.change-text-int:nth-child(1) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* Orpheus all vasakul */
+.change-text-int:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* River all paremal */
+.change-text-int:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.mourning-christ-img {
+  width: 800px;
+  height: 558px;
+}
+
+.land-orph-eury-img {
+  width: 900px;
+  height: 518px;
+}
+
+.river-landscape-img {
+  width: 800px;
+  height: 518px;
+}
+
+/* Ajaloo kast koos teksti ja piltidega */
+.history-box h3 {
+  width: 900px;
+  height: 100px;
+  padding: 25px;
+  border: 3px solid var(--darker-variant-green);
+  margin: 80px 0px 0px 1455px;
+  background-color: var(--accent-col-green);
+  color: var(--text-color);
+  font-family: "Vidaloka";
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.history-box p {
+  width: 900px;
+  height: auto;
+  padding: 35px;
+  border: 3px solid var(--darker-variant-green);
+  margin: 100px 0px 0px 1455px;
+  background-color: var(--accent-col-green);
+  color: var(--text-color);
+  font-family: "Asul";
+  font-size: 24px;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+.container-images-his {
+  display: grid;
+  grid-template-columns: repeat(2, 3fr);
+  gap: 100px;
+  margin-left: 525px;
+  margin-top: -800px;
+  padding: 0px 0px 80px 0px;
+  align-items: start;
+}
+
+.change-text-his {
+  display: flex;
+  flex-direction: column;
+}
+
+.change-text-his img {
+  border-radius: 10px;
+}
+
+.mary-text-change,
+.banquet-text-change {
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* Viited linkide ja värviga */
+.banquet-text-change {
+  color: var(--accent-col-red);
+}
+
+.banquet-text-change a {
+  color: var(--darker-variant-red);
+}
+
+.mary-text-change {
+  color: var(--accent-col-yellow);
+}
+
+.mary-text-change a {
+  color: var(--darker-variant-yellow);
+}
+
+/* Banquet all vasakul */
+.change-text-his:nth-child(1) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* Mary Üleval vasakul */
+.change-text-his:nth-child(2) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.mary-img {
+  width: 700px;
+  height: 800px;
+}
+
+.banquet-img {
+  width: 900px;
+  height: 518px;
+}
+
+/* All olev tekst, et nii tühi ei oleks */
+footer p {
+  width: 100%;
+  border: 3px solid var(--primary-color);
+  background-color: var(--primary-color);
+  padding: 35px 35px;
+  font-family: "Vidaloka", serif;
+  text-align: center;
+  font-size: 36px;
+  color: var(--text-color);
+  letter-spacing: 2px;
+}
+
+/* Pealkiri- Tunnused ja Kunstnikud */
+.title-box-tk {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 35px 35px;
+}
+
+.title-box-tk h3 {
+  font-family: "Vidaloka", serif;
+  text-align: center;
+  font-size: 36px;
+  color: var(--text-color);
+  letter-spacing: 2px;
+}
+
+/* Tunnusete kast koos teksti ja piltidega */
+.traits-box h3 {
+  width: 900px;
+  height: 100px;
+  padding: 25px;
+  border: 3px solid var(--darker-variant-red);
+  margin: 80px 0px 0px 460px;
+  background-color: var(--accent-col-red);
+  color: var(--text-color);
+  font-family: "Vidaloka";
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.traits-box p {
+  width: 900px;
+  height: auto;
+  padding: 35px;
+  border: 3px solid var(--darker-variant-red);
+  margin: 80px 0px 0px 460px;
+  background-color: var(--accent-col-red);
+  color: var(--text-color);
+  font-family: "Asul";
+  font-size: 24px;
+  text-align: left;
+  letter-spacing: 2px;
+}
