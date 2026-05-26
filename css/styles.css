@@ -65,7 +65,7 @@ body {
   color: var(--text-color);
 }
 
-/* Pealkiri- Sissejuhatus ja Ajalugu */
+/* Pealkiri- Sissejuhatus ja Ajalugu tumepruuni taustaga */
 .title-box-sa {
   width: 100%;
   background-color: var(--primary-color);
@@ -80,7 +80,7 @@ body {
   letter-spacing: 2px;
 }
 
-/* Sissejuhatuse kast koos teksti ja piltidega */
+/* Sissejuhatuse kast kollase tausta ja kirjastiiliga */
 .introduction-box h3 {
   width: 900px;
   height: 100px;
@@ -109,7 +109,7 @@ body {
   letter-spacing: 2px;
 }
 
-/* Piltide paigutamine ning viidete alla lisamine */
+/* Piltide paigutamine ning viidete alla lisamine gridi abil*/
 .container-images-int {
   display: grid;
   grid-template-columns: repeat(3, 3fr);
@@ -137,7 +137,7 @@ body {
   text-align: left;
 }
 
-/* Viited linkide ja värviga */
+/* Viited, linkide ja värvidega */
 .pieta-text-change {
   color: var(--accent-col-yellow);
 }
@@ -180,6 +180,8 @@ body {
   grid-row: 2;
 }
 
+/* Piltide suuruste lisamine */
+
 .mourning-christ-img {
   width: 800px;
   height: 558px;
@@ -195,7 +197,7 @@ body {
   height: 518px;
 }
 
-/* Ajaloo kast koos teksti ja piltidega */
+/* Ajaloo kast rohelise tausta ja kirjastiiliga */
 .history-box h3 {
   width: 900px;
   height: 100px;
@@ -224,6 +226,8 @@ body {
   letter-spacing: 2px;
 }
 
+/* Pildid jaa tekst paigutatud grid süsteemi */
+
 .container-images-his {
   display: grid;
   grid-template-columns: repeat(2, 3fr);
@@ -249,7 +253,7 @@ body {
   text-align: left;
 }
 
-/* Viited linkide ja värviga */
+/* Viited linkide ja värvidega */
 .banquet-text-change {
   color: var(--accent-col-red);
 }
@@ -278,6 +282,8 @@ body {
   grid-row: 1;
 }
 
+/* Piltide suuruste lisamine */
+
 .mary-img {
   width: 700px;
   height: 800px;
@@ -288,7 +294,7 @@ body {
   height: 518px;
 }
 
-/* All olev tekst, et nii tühi ei oleks */
+/* footeri tekst,tumepruuni taustaga */
 footer p {
   width: 100%;
   border: 3px solid var(--primary-color);
@@ -301,14 +307,18 @@ footer p {
   letter-spacing: 2px;
 }
 
-/* Pealkiri- Tunnused ja Kunstnikud */
-.title-box-tk {
+/* - */
+/* - */
+/* - */
+
+/* Pealkiri- Tunnused ja Kunstnikud tumepruuni taustaga*/
+.title-box-t {
   width: 100%;
   background-color: var(--primary-color);
   padding: 35px 35px;
 }
 
-.title-box-tk h3 {
+.title-box-t h3 {
   font-family: "Vidaloka", serif;
   text-align: center;
   font-size: 36px;
@@ -316,7 +326,7 @@ footer p {
   letter-spacing: 2px;
 }
 
-/* Tunnusete kast koos teksti ja piltidega */
+/* Tunnusete kast punase taustaga */
 .traits-box h3 {
   width: 900px;
   height: 100px;
@@ -344,3 +354,132 @@ footer p {
   text-align: left;
   letter-spacing: 2px;
 }
+
+/* Piltide paigutamine gridi põhjal */
+.container-images-tra {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 80px;
+  margin-left: 1450px;
+  margin-top: -710px;
+  align-items: start;
+}
+
+.change-text-tra {
+  display: flex;
+  flex-direction: column;
+}
+
+.change-text-tra img {
+  border-radius: 10px;
+}
+
+.sabine-text-change,
+.procuress-text-change,
+.swing-text-change {
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* Viited, linkide ja värvidega */
+.sabine-text-change {
+  color: var(--accent-col-yellow);
+}
+
+.sabine-text-change a {
+  color: var(--darker-variant-red);
+}
+
+.procuress-text-change {
+  color: var(--accent-col-red);
+}
+
+.procuress-text-change a {
+  color: var(--darker-variant-yellow);
+}
+
+.swing-text-change {
+  color: var(--accent-col-green);
+}
+
+.swing-text-change a {
+  color: var(--darker-variant-green);
+}
+
+/* Pieta üleval paremal */
+.change-text-tra:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* Orpheus all vasakul */
+.change-text-tra:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* River all paremal */
+.change-text-tra:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* Piltide suuruste lisamine */
+
+.sabines-img {
+  width: 400px;
+  height: 300px;
+}
+
+.procuress-img {
+  width: 400px;
+  height: 300px;
+}
+
+.swing-img {
+  margin-top: -410px;
+  width: 450px;
+  height: 672px;
+}
+
+.title-box-k h3 {
+  width: 1900px;
+  height: 100px;
+  padding: 35px;
+  border: 3px solid var(--darker-variant-yellow);
+  background-color: var(--accent-col-yellow);
+  margin: 80px 0px 0px 492.5px;
+  color: var(--text-color);
+  font-family: "Vidaloka";
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.artist-box {
+  color: var(--text-color);
+  font-family: "Asul";
+  font-size: 24px;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+.artist-box {
+  display: grid;
+  grid-template-columns: repeat(3, 690px);
+  margin-left: 31px;
+  margin-top: 0px;
+  align-items: start;
+}
+
+.artist-box p {
+  width: 520.33px;
+  height: auto;
+  padding: 25px;
+  border: 3px solid var(--darker-variant-yellow);
+  margin: 80px 0px 0px 460px;
+  background-color: var(--accent-col-yellow);
+}
+
+
+
