@@ -295,6 +295,11 @@ body {
 }
 
 /* footeri tekst,tumepruuni taustaga */
+
+footer {
+  margin: 80px 0px -20px 0px;
+}
+
 footer p {
   width: 100%;
   border: 3px solid var(--primary-color);
@@ -406,19 +411,19 @@ footer p {
   color: var(--darker-variant-green);
 }
 
-/* Pieta üleval paremal */
+/* Sabine */
 .change-text-tra:nth-child(1) {
   grid-column: 1;
   grid-row: 1;
 }
 
-/* Orpheus all vasakul */
+/* Procuress */
 .change-text-tra:nth-child(2) {
   grid-column: 1;
   grid-row: 2;
 }
 
-/* River all paremal */
+/* Swing */
 .change-text-tra:nth-child(3) {
   grid-column: 2;
   grid-row: 2;
@@ -442,6 +447,7 @@ footer p {
   height: 672px;
 }
 
+/* Tunnusete kast kollase taustaga */
 .title-box-k h3 {
   width: 1900px;
   height: 100px;
@@ -481,5 +487,283 @@ footer p {
   background-color: var(--accent-col-yellow);
 }
 
+/* Piltide gridi süsteemi paigutamine üksteise kõrvale */
 
+.container-images-art {
+  display: grid;
+  grid-template-columns: repeat(3, 690px);
+  margin: 80px 0px 0px 490px;
+}
 
+.change-text-art {
+  display: flex;
+  flex-direction: column;
+}
+
+.change-text-art img {
+  margin: 80px 0px 0px 0px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px var(--primary-color);
+}
+
+.massacre-text-change,
+.öine-text-change,
+.holy-text-change {
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* Viited, linkide ja värvidega */
+.massacre-text-change {
+  color: var(--accent-col-yellow);
+}
+
+.massacre-text-change a {
+  color: var(--darker-variant-yellow);
+}
+
+.öine-text-change {
+  color: var(--accent-col-red);
+}
+
+.öine-text-change a {
+  color: var(--darker-variant-red);
+}
+
+.holy-text-change {
+  color: var(--accent-col-yellow);
+}
+
+.holy-text-change a {
+  color: var(--darker-variant-yellow);
+}
+
+/* Piltide suuruste lisamine */
+
+.veresaun-img {
+  width: 520.33px;
+  height: 358px;
+}
+
+.night-img {
+  width: 520.33px;
+  height: 398px;
+}
+
+.family-img {
+  width: 520.33px;
+  height: 348px;
+}
+
+/* - */
+/* - */
+/* - */
+
+/* Pealkiri- Tähtsus ja Mõju tumepruuni taustaga*/
+.title-box-t {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 35px 35px;
+}
+
+.title-box-t h3 {
+  font-family: "Vidaloka", serif;
+  text-align: center;
+  font-size: 36px;
+  color: var(--text-color);
+  letter-spacing: 2px;
+}
+
+/* Tähtsuse kast punase taustaga */
+.importance-box h3 {
+  width: 900px;
+  height: 100px;
+  padding: 25px;
+  border: 3px solid var(--darker-variant-red);
+  margin: 80px 0px 0px 460px;
+  background-color: var(--accent-col-red);
+  color: var(--text-color);
+  font-family: "Vidaloka";
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.importance-box p {
+  width: 900px;
+  height: auto;
+  padding: 35px;
+  border: 3px solid var(--darker-variant-red);
+  margin: 80px 0px 0px 460px;
+  background-color: var(--accent-col-red);
+  color: var(--text-color);
+  font-family: "Asul";
+  font-size: 24px;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+/* Piltide paigutamine gridi põhjal */
+.container-images-imp {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 80px;
+  margin-left: 1450px;
+  margin-top: -710px;
+  align-items: start;
+}
+
+.change-text-imp {
+  display: flex;
+  flex-direction: column;
+}
+
+.change-text-imp img {
+  border-radius: 10px;
+}
+
+.judith-text-change,
+.christ-text-change,
+.meninas-text-change {
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* Viited, linkide ja värvidega */
+.judith-text-change {
+  color: var(--accent-col-yellow);
+}
+
+.judith-text-change a {
+  color: var(--darker-variant-red);
+}
+
+.christ-text-change {
+  color: var(--accent-col-red);
+}
+
+.christ-text-change a {
+  color: var(--darker-variant-yellow);
+}
+
+.meninas-text-change {
+  color: var(--accent-col-green);
+}
+
+.meninas-text-change a {
+  color: var(--darker-variant-green);
+}
+
+/* Piltide suuruste lisamine */
+
+.judith-img {
+  width: 400px;
+  height: 300px;
+}
+
+.christ-img {
+  width: 400px;
+  height: 300px;
+}
+
+.meninas-img {
+  width: 450px;
+  height: 672px;
+}
+
+/* Mõju kast punase taustaga */
+.influence-box h3 {
+  width: 900px;
+  height: 100px;
+  padding: 25px;
+  border: 3px solid var(--darker-variant-red);
+  margin: 80px 0px 0px 460px;
+  background-color: var(--accent-col-red);
+  color: var(--text-color);
+  font-family: "Vidaloka";
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.influence-box p {
+  width: 900px;
+  height: auto;
+  padding: 35px;
+  border: 3px solid var(--darker-variant-red);
+  margin: 80px 0px 0px 460px;
+  background-color: var(--accent-col-red);
+  color: var(--text-color);
+  font-family: "Asul";
+  font-size: 24px;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+/* Piltide paigutamine gridi põhjal */
+.container-images-inf {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 80px;
+  margin-left: 1450px;
+  margin-top: -710px;
+  align-items: start;
+}
+
+.change-text-inf {
+  display: flex;
+  flex-direction: column;
+}
+
+.change-text-inf img {
+  border-radius: 10px;
+}
+
+.matteuse-text-change,
+.charles-text-change,
+.meninas-text-change {
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* Viited, linkide ja värvidega */
+.matteuse-text-change {
+  color: var(--accent-col-yellow);
+}
+
+.matteuse-text-change a {
+  color: var(--darker-variant-red);
+}
+
+.charles-text-change {
+  color: var(--accent-col-red);
+}
+
+.charles-text-change a {
+  color: var(--darker-variant-yellow);
+}
+
+.meninas-text-change {
+  color: var(--accent-col-green);
+}
+
+.meninas-text-change a {
+  color: var(--darker-variant-green);
+}
+
+/* Piltide suuruste lisamine */
+
+.matteuse-img {
+  width: 400px;
+  height: 300px;
+}
+
+.charles-img {
+  width: 400px;
+  height: 300px;
+}
+
+.meninas-img {
+  width: 450px;
+  height: 672px;
+}
