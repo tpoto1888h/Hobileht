@@ -766,4 +766,67 @@ footer p {
 .meninas-img {
   width: 450px;
   height: 672px;
+
+  /* - */
+  /* - */
+  /* - */
+}
+
+/* Formide juurde kastide lisamine */
+
+.container-text-contact h1 {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 35px 35px;
+  margin-top: -33px;
+  font-family: "Vidaloka", serif;
+  text-align: center;
+  font-size: 36px;
+  color: var(--text-color);
+  letter-spacing: 2px;
+}
+
+.form-group {
+  margin: 30px 350px 20px 600px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--text-color);
+  background-color: var(--primary-color);
+  font-size: 24px;
+  font-family: "Asul";
+}
+
+.form-group textarea {
+  height: 570px;
+  color: var(--text-color);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--text-color);
+}
+
+.title-box-g {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 35px 35px;
+}
+
+.title-box-g h3 {
+  font-family: "Vidaloka", serif;
+  text-align: center;
+  font-size: 36px;
+  color: var(--text-color);
+  letter-spacing: 2px;
 }

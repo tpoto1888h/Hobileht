@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Barokk-kunst</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- Side-bar -->
+        <div class="sidenav">
+          <h3>Menüü</h3>
+          <ul>
+            <li><a href="index.html">Avaleht</a></li>
+            <li><a href="tun-kun.html">Tunnused ja Kunstnikud</a></li>
+            <li><a href="täht-mõju.html">Tähtsus ja Mõju</a></li>
+            <li>
+              <a class="current" href="contact.html">Minust ja Kontakt</a>
+            </li>
+            <li><a href="gallery.html">Galerii</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Pealkiri- Lisan Minust ja Kontakt pealkirja -->
+      <section>
+        <div class="title-box-m">
+          <h3>Kontakt ja Minust</h3>
+        </div>
+      </section>
+
+      <!-- Väljade nime, emaili ja sõnumi lisamine  -->
+      <div class="container-text-contact">
+        <h1>Võta ühendust Meiega</h1>
+        <p>Palun täida all olev vorm</p>
+        <form action="">
+          <div class="form-group">
+            <label for="Name">Nimi</label>
+            <input type="text" id="name" />
+          </div>
+          <div class="form-group">
+            <label for="Email">Email</label>
+            <input type="email" id="email" />
+          </div>
+          <div class="form-group">
+            <label for="Message">Sõnum</label>
+            <textarea id="message"></textarea>
+          </div>
+
+          <button type="submit" class="btn">Saada</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
