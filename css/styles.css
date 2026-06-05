@@ -773,7 +773,6 @@ footer p {
 }
 
 /* Formide juurde kastide lisamine */
-
 .container-text-contact h1 {
   width: 100%;
   background-color: var(--primary-color);
@@ -796,25 +795,21 @@ footer p {
   font-size: 24px;
 }
 
+/* Ääriste tegemine, näidistele värvi andmine, teksti stiilimine  */
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid var(--text-color);
+  border-radius: 10px;
   background-color: var(--primary-color);
   font-size: 24px;
   font-family: "Asul";
+  color: var(--text-color);
 }
 
 .form-group textarea {
   height: 570px;
-  color: var(--text-color);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--text-color);
 }
 
 .title-box-g {
