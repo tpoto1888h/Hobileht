@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="et">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,21 +15,19 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Barokk-kunst</title>
+    <title>Barokk-kunst - Galerii</title>
   </head>
+
   <body>
     <header>
       <nav>
-        <!-- Side-bar -->
         <div class="sidenav">
           <h3>Menüü</h3>
           <ul>
             <li><a href="index.html">Avaleht</a></li>
             <li><a href="tun-kun.html">Tunnused ja Kunstnikud</a></li>
             <li><a href="täht-mõju.html">Tähtsus ja Mõju</a></li>
-            <li>
-              <a href="contact.html">Minust ja Kontakt</a>
-            </li>
+            <li><a href="contact.html">Kontakt</a></li>
             <li><a class="current" href="gallery.html">Galerii</a></li>
           </ul>
         </div>
@@ -37,78 +35,93 @@
     </header>
 
     <main>
-      <!-- Pealkiri- Lisan Galerii pealkirja -->
       <section>
-        <div class="title-box-g">
-          <h3>Galerii</h3>
+        <div class="title-box-t">
+          <h3>Kunstigalerii</h3>
         </div>
       </section>
 
-      <div class="container-images-gal">
-        <!-- Pearl girl -->
-        <div class="change-text-gal">
-          <img
-            src="img/pärl.jpg"
-            class="girl-pearl-img"
-            alt="Tütarlaps pärlkõrvarõngaga"
-          />
-          <div class="pearl-text-change">
-            <p>Johannes Vermeer,</p>
-            <a
-              href="https://et.wikipedia.org/wiki/T%C3%BCtarlaps_p%C3%A4rlk%C3%B5rvar%C3%B5ngaga"
-              >"Tütarlaps pärlkõrvarõngaga"</a
-            >
-          </div>
+      <section class="importance-section-layout">
+        <div class="importance-box-green" style="margin-top: 40px;">
+          <h3>Baroki teosed</h3>
         </div>
 
-        <!-- Anatoomia -->
-        <div class="change-text-gal">
-            <img src="img/anatomy.jpg" class="anatomy-class-img" alt="Doktor Tulpi anatoomialoeng">
-            <div class="anatomy-text-change">
-                <p>Rembrandt van Rijn, </p>
-                <a href="https://en.wikipedia.org/wiki/The_Anatomy_Lesson_of_Dr._Nicolaes_Tulp">"Doktor Tulbi anatoomialoeng"</a>
+        <div class="importance-images-grid">
+          <div class="change-text-art">
+            <img src="img/anatomy.jpg" alt="Rembrandt - Dr. Nicolaes Tulpi anatoomialoeng" />
+            <div class="holy-text-change">
+              <p>Rembrandt van Rijn</p>
+              <a href="#">"Doktor Tulbi anatoomialoeng"</a>
             </div>
-        </div>
+          </div>
 
-        <!-- Pope -->
-        <div class="change-text-gal">
-          <img src="img/pope.jpg" class="pope-img" alt="Portree Pope'ist">
-          <div class="pope-text-change">
-            <p>Diego Velázquez, </p>
-            <a href="https://en.wikipedia.org/wiki/Portrait_of_Innocent_X">"Süütute portree"</a>
+          <div class="change-text-art meninas-card">
+            <img src="img/pärl.jpg" alt="Johannes Vermeer - Tüdruk pärlikõrvarõngaga" />
+            <div class="mary-text-change">
+              <p>Johannes Vermeer</p>
+              <a href="#">"Tütarlaps pärlkõrvarõngaga"</a>
+            </div>
+          </div>
+
+          <div class="change-text-art">
+            <img src="img/taking.jpg" alt="Caravaggio - Kristuse vangistamine" />
+            <div class="massacre-text-change">
+              <p>Caravaggio</p>
+              <a href="#">"Kristuse vangistamine"</a>
+            </div>
           </div>
         </div>
+      </section>
 
-        <!-- Õhtusöök Emmauses -->
-        <div class="change-text-gal">
-          <img src="img/emmaus.jpg" class="emmaus-img" alt="Õhtusöök Emmauses">
-          <div class="emmaus-text-change">
-            <p>Michelangelo Caravaggio, </p>
-            <a href="https://en.wikipedia.org/wiki/Supper_at_Emmaus_(Caravaggio,_London)">"Õhtusöök Emmauses"</a>
+      <section class="importance-section-layout" style="margin-top: 80px; margin-bottom: 80px;">
+        <div class="artists-grid-layout" style="margin: 0; padding: 0;">
+          
+          <div class="artist-column" style="justify-content: center;">
+            <div class="change-text-art" style="height: auto;">
+              <img src="img/pope.jpg" style="height: 300px !important;" alt="Diego Velázquez - Paavst Innocentius X portree" />
+              <div class="judith-text-change">
+                <p>Diego Velázquez</p>
+                <a href="#">"Paavst Innocentius X portree"</a>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- Kristuse võtmine -->
-        <div class="change-text-gal">
-          <img src="img/taking.jpg" class="taking-img" alt="Kristuse võtmine ">
-          <div class="taking-text-change">
-            <p>Michelangelo Caravaggio,</p>
-            <a href="https://en.wikipedia.org/wiki/The_Taking_of_Christ_(Caravaggio)">Kristuse võtmine</a>
+          <div class="artist-column">
+            <div class="change-text-art">
+              <img src="img/kunst.jpg" alt="Johannes Vermeer - Maalikunsti allegooria" />
+              <div class="mary-text-change">
+                <p>Johannes Vermeer</p>
+                <a href="#">"Maalikunst"</a>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- Maalikunst -->
-        <div class="change-text-gal">
-          <img src="img/kunst.jpg" class="art-img" alt="Maalikunst">
-          <div class="art-text-change">
-            <p>Johannes Vermeer,</p>
-            <a href="https://en.wikipedia.org/wiki/The_Art_of_Painting">Maalikunst</a>
+          <div class="artist-column" style="grid-column: span 1;">
+            <div class="change-text-art">
+              <img src="img/emmaus.jpg" style="height: 400px !important;" alt="Caravaggio - Emmause õhtusöök" />
+              <div class="massacre-text-change">
+                <p>Caravaggio</p>
+                <a href="#">"Emmause õhtusöök"</a>
+              </div>
+            </div>
           </div>
+
         </div>
-
-        
-
-      </div>
+      </section>
     </main>
-  </body>
+
+    <footer>
+    <div class="footer-content">
+      <span class="footer-text">Leia mind veel:</span>
+      <div class="footer-icons">
+        <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/>
+        </svg>
+        <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        </svg>
+      </div>
+    </div>
+    </footer>
+</body>
 </html>

@@ -18,7 +18,7 @@
   --darker-variant-yellow: #b78113;
 }
 
-/* Juhend: Sujuv kerimine lehel */
+/* Sujuv kerimine */
 html {
   scroll-behavior: smooth;
 }
@@ -150,9 +150,7 @@ main section {
   margin-top: 20px;
 }
 
-/* ==========================================
-   AVALEHE 1. SAKK: Sissejuhatus (.layout-grid-int)
-   ========================================== */
+/* Sissejuhatuse sektsioon */
 .layout-grid-int {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -187,9 +185,7 @@ main section {
   grid-row: 2;
 }
 
-/* ==========================================
-   AVALEHE 2. SAKK: Ajalugu (.layout-grid-his)
-   ========================================== */
+/* Ajaloo sektsioon */
 .layout-grid-his {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -221,9 +217,7 @@ main section {
   grid-row: 2;
 }
 
-/* ==========================================
-   TUNNUSTE LEHE UUENDUS: Muudetud proportionsioonidega võrgustik
-   ========================================== */
+/* Tunnuste sektsioon */
 .layout-grid-tra {
   display: grid;
   grid-template-columns: 1.5fr 0.9fr 1.6fr;
@@ -238,7 +232,7 @@ main section {
   display: contents;
 }
 
-/* Skeemil Vasakul: Tunnuste suur tekstikast */
+/* Skeemil vasakul: Tunnuste suur tekstikast */
 .traits-box {
   grid-column: 1;
   grid-row: 1 / span 2;
@@ -252,21 +246,19 @@ main section {
   grid-row: 1;
 }
 
-/* Skeemil Keskel All: Kosjasobitaja */
+/* Skeemil keskel all: Kosjasobitaja */
 .change-text-tra:nth-child(2) {
   grid-column: 2;
   grid-row: 2;
 }
 
-/* Skeemil Paremal: Kiik */
+/* Skeemil paremal: Kiik */
 .change-text-tra:nth-child(3) {
   grid-column: 3;
   grid-row: 1 / span 2;
 }
 
-/* ==========================================
-   KAARTIDE JA PILTIDE BAASTIILID
-   ========================================== */
+/* Piltide baaststiilid */
 .change-text-int,
 .change-text-his,
 .change-text-tra,
@@ -296,7 +288,7 @@ main section {
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Piltide paindlik seadistus ruumi täitmiseks */
+/* Piltide paindlik, et ruumi täita */
 .change-text-int img,
 .change-text-his img,
 .change-text-tra img,
@@ -351,9 +343,7 @@ main section {
   font-weight: bold;
 }
 
-/* ==========================================
-   AJALOO SISU KUJUNDUS (Roheline)
-   ========================================== */
+/* Ajaloo sektsiooni tekstid */
 .history-box h3 {
   border: 3px solid var(--darker-variant-green);
   background-color: var(--accent-col-green);
@@ -386,9 +376,7 @@ main section {
   font-weight: bold;
 }
 
-/* ==========================================
-   TUNNUSTE SISU KUJUNDUS (Punane)
-   ========================================== */
+/* Tunnuste sektsiooni tekstid */
 .traits-box h3 {
   border: 3px solid var(--darker-variant-red);
   background-color: var(--accent-col-red);
@@ -418,9 +406,7 @@ main section {
   font-weight: bold;
 }
 
-/* ==========================================
-   UUS KUNSTNIKE SECTION - SKEEMI JÄRGI (Kollane)
-   ========================================== */
+/* Kunstnikute sektsiooni tekstid */
 .artists-grid-layout {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -454,9 +440,7 @@ main section {
   object-fit: cover;
 }
 
-/* ==========================================
-   MÕJU SEKTSOONI PILTIDE GRID (Alumine rida)
-   ========================================== */
+/* Mõju sektsiooni piltide grid */
 .container-images-inf {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -466,7 +450,7 @@ main section {
   padding: 0 20px;
 }
 
-/* Mõju sektsiooni kasti stiilid (Roheline nagu ajalugu) */
+/* Mõju sektsioon roheliseks tegemine */
 .influence-box h3 {
   border: 3px solid var(--darker-variant-green);
   background-color: var(--accent-col-green);
@@ -482,19 +466,17 @@ main section {
   margin-top: 20px;
 }
 
-/* ==========================================
-   SPETSIIFILINE SKEEMI DISAIN: TÄHTSUSE SEKTSIOON
-   ========================================== */
+/* Tähtsuse sektsioon roheliseks tegemine */
 .importance-section-layout {
   max-width: 1440px;
   margin: 40px auto 60px auto;
   padding: 0 20px;
 }
 
-/* Joonisel üleval keskel asuv roheline tekstikast */
+/* Üleval keskel asuv roheline tekstikast */
 .importance-box-green {
   max-width: 1440px;
-  margin: 0 auto 50px auto; /* Keskasendisse lükkamine */
+  margin: 0 auto 50px auto;
 }
 .importance-box-green h3 {
   padding: 15px;
@@ -516,7 +498,7 @@ main section {
   margin-top: 20px;
 }
 
-/* Alumine piltide rida (3 tulpa) */
+/* Alumine piltide rida 3 tulpa */
 .importance-images-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -524,24 +506,22 @@ main section {
   align-items: stretch;
 }
 
-/* KESKMISE PILDI TRIPP: Surume Õuedaamid keskele madalaks */
+/* Õuedaamid */
 .meninas-card {
   align-self: center;
-  height: auto !important;
+  height: auto;
 }
 .meninas-card img {
-  height: 280px !important;
+  height: 280px;
 }
 
-/* ÄÄRMISED PIKAD PILDID: Juudit ja Ristilt mahavõtmine */
+/* Juudit ja Ristilt mahavõtmine */
 .judith-card img,
 .descent-card img {
-  height: 460px !important;
+  height: 460px;
 }
 
-/* ==========================================
-   TEKSTID JA ROHELISED LINKIDE VÄRVID (Tähtsus & Mõju)
-   ========================================== */
+/* Tähtsus ja mõju, tekstid */
 .judith-text-change,
 .christ-text-change,
 .meninas-text-change,
@@ -560,7 +540,7 @@ main section {
 .matteuse-text-change p,
 .charles-text-change p,
 .storm-text-change p {
-  color: var(--darker-variant-green);
+  color: var(--darker-variant-yellow);
   margin: 0;
 }
 
@@ -570,23 +550,11 @@ main section {
 .matteuse-text-change a,
 .charles-text-change a,
 .storm-text-change a {
-  color: var(--accent-col-green);
+  color: var(--accent-col-yellow);
   font-weight: bold;
-  text-decoration: none;
 }
 
-.judith-text-change a:hover,
-.christ-text-change a:hover,
-.meninas-text-change a:hover,
-.matteuse-text-change a:hover,
-.charles-text-change a:hover,
-.storm-text-change a:hover {
-  text-decoration: underline;
-}
-
-/* ==========================================
-   KUNSTNIKE LEHE TEKSTID (Rubens, Rembrandt jne)
-   ========================================== */
+/* Kunstnike lehe tekstid */
 .massacre-text-change a,
 .öine-text-change a,
 .holy-text-change a {
@@ -619,9 +587,7 @@ main section {
   font-weight: bold;
 }
 
-/* ==========================================
-   KONTAKTIVORM & FOOTER
-   ========================================== */
+/* Kontaktvorm */
 .container-text-contact {
   max-width: 600px;
   margin: 60px auto;
@@ -636,6 +602,14 @@ main section {
   font-family: "Vidaloka", serif;
   color: var(--bg-color);
   margin-bottom: 10px;
+}
+
+.form-subtitle {
+  color: var(--bg-color);
+  font-family: "Asul", sans-serif;
+  font-size: 16px;
+  margin-bottom: 25px;
+  opacity: 0.9;
 }
 
 .form-group {
@@ -700,22 +674,6 @@ main section {
   transform: translateY(0);
 }
 
-footer {
-  margin-top: 80px;
-}
-
-footer p {
-  width: 100%;
-  border: 3px solid var(--primary-color);
-  background-color: var(--primary-color);
-  padding: 35px;
-  font-family: "Vidaloka", serif;
-  text-align: center;
-  font-size: 28px;
-  color: var(--text-color);
-  letter-spacing: 2px;
-}
-
 .title-box-t {
   width: 100%;
   background-color: var(--primary-color);
@@ -741,4 +699,42 @@ footer p {
   font-size: 32px;
   text-align: center;
   letter-spacing: 2px;
+}
+
+footer {
+  margin-top: 80px;
+  width: 100%;
+  border: 3px solid var(--primary-color);
+  background-color: var(--primary-color);
+  padding: 35px;
+}
+
+/* Ttekst ja ikoonid paigutataud keskele ühele reale */
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Vahe teksti ja ikoonide vahel */
+}
+
+/* Jaluse tekst */
+.footer-text {
+  font-family: "Vidaloka", serif;
+  font-size: 28px;
+  color: var(--text-color);
+  letter-spacing: 2px;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Ikooni suuruste lisamine */
+.social-icon {
+  width: 32px;
+  height: 32px;
+  fill: var(--text-color); /* Alati sama toon mis tekstil */
+  display: block;
 }
