@@ -11,12 +11,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Barokk-kunst</title>
+    <title>Barokk-kunst - Tähtsus ja Mõju</title>
   </head>
+
   <body>
     <header>
       <nav>
-        <!-- Side-bar -->
         <div class="sidenav">
           <h3>Menüü</h3>
           <ul>
@@ -33,16 +33,14 @@
     </header>
 
     <main>
-      <!-- Pealkiri- Lisan Tähtsuse ja Mõju pealkirja -->
       <section>
         <div class="title-box-t">
           <h3>Tähtsus ja Mõju</h3>
         </div>
       </section>
 
-      <!-- Alampealkiri- Tähtsus -->
-      <section>
-        <div class="importance-box">
+      <section class="importance-section-layout">
+        <div class="importance-box-green">
           <h3>Tähtsus</h3>
           <p>
             Euroopa kolonialismi ja misjonitöö kaudu levis baroki esteetika
@@ -50,115 +48,124 @@
             kunstitraditsioone. Kunstnikud olid tugevad liikumise ja
             intensiivsete psühholoogiliste seisundite jäädvustamise tehnikates,
             liikudes stiliseeritud tavadest dünaamiliste ja realistlike
-            elukujutiste poole.
+            elukujutiste poole. See ajastu tõi kaasa murrangulisi tehnikaid, mis
+            muutsid igaveseks visuaalset jutuvestmist. Kunstnikud keskendusid
+            pigem tegevuse täpsele haripunktile kui sellele eelnevatele
+            hetkedele. Samuti populariseerisid nad valgus- ja varjundit– valguse
+            ja sügava varju dramaatilist, kontrastset kasutamist. See suurendas
+            pinget, energiat ja emotsionaalset intensiivsust.
           </p>
         </div>
 
-        <!-- Tähtsuse sektsiooni pildid koos linkidega  -->
-        <div class="container-images-imp">
-          <!-- Juudit tapab Holofernese -->
-          <div class="change-text-imp">
+        <div class="importance-images-grid">
+          <div class="change-text-imp judith-card">
             <img
               src="img/judith.jpg"
               class="judith-img"
-              alt="Juudit tapab Holofernese "
+              alt="Juudit tapab Holofernese"
             />
-          </div>
-          <div class="judith-text-change">
-            <p>Artemisia Gentileschi,</p>
-            <a href="https://en.wikipedia.org/wiki/Judith_beheading_Holofernes"
-              >"Juudit tapab Holofernese"</a
-            >
+            <div class="judith-text-change">
+              <p>Artemisia Gentileschi,</p>
+              <a
+                href="https://en.wikipedia.org/wiki/Judith_beheading_Holofernes"
+                >"Juudit tapab Holofernese"</a
+              >
+            </div>
           </div>
 
-          <!-- Ristilt mahavõtmine -->
-          <div class="change-text-imp">
+          <div class="change-text-imp meninas-card">
+            <img src="img/meninas.webp" class="meninas-img" alt="Las Meninas" />
+            <div class="meninas-text-change">
+              <p>Diego Velázquez,</p>
+              <a href="https://et.wikipedia.org/wiki/Las_Meninas"
+                >"Õuedaamid"</a
+              >
+            </div>
+          </div>
+
+          <div class="change-text-imp descent-card">
             <img
               src="img/mahavõtmine.jpg"
               class="christ-img"
               alt="Ristilt mahavõtmine"
             />
-          </div>
-          <div class="christ-text-change">
-            <p>Peter Paul Rubens,</p>
-            <a
-              href="https://et.wikipedia.org/wiki/Ristilt_mahav%C3%B5tmine_(Rubens,_1617)"
-              >"Ristilt mahavõtmine"
-            </a>
-          </div>
-
-          <!-- Õuedaamid -->
-          <div class="change-text-imp">
-            <img src="img/meninas.webp" class="meninas-img" alt="Las Meninas" />
-          </div>
-          <div class="meninas-text-change">
-            <p>Diego Velázquez,</p>
-            <a href="https://et.wikipedia.org/wiki/Las_Meninas">"Õuedaamid"</a>
+            <div class="christ-text-change">
+              <p>Peter Paul Rubens,</p>
+              <a
+                href="https://et.wikipedia.org/wiki/Ristilt_mahav%C3%B5tmine_(Rubens,_1617)"
+                >"Ristilt mahavõtmine"</a
+              >
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Alampealkiri- Mõju -->
       <section>
         <div class="influence-box">
           <h3>Mõju</h3>
           <p>
-            See liikumine tekkis protestantliku reformatsiooni taustal, kus
-            katoliku kirik soovis oma võimu taaskehtestamiseks kasutada kunsti –
+            See liikumine tekkis protestantliku reformatsiooni taustal, waar
+            katoliku kirik soovis oma võimu taaskehtestamiseks kasutada kunsti-
             nad tellisid vaataja emotsioonide esilekutsumiseks suuremahulisi
-            dramaatilisi maale ja skulptuure.
+            dramaatilisi maale ja skulptuure. Kaubanduse ja Euroopa
+            koloniseerimise kaudu levis baroki esteetika Ladina-Ameerikasse,
+            Aasiasse ja Aafrikasse. Intensiivne keskendumine emotsioonidele
+            aitas otseselt kaasa ooperi leiutamisele ja
+            esiletõusule.Barokkvalgustuse visuaalset pärandit on tänapäevalgi
+            näha fotograafias ja kinos.
           </p>
         </div>
 
-        <!-- Mõju sektsiooni pildid koos linkidega  -->
         <div class="container-images-inf">
-          <!-- Püha Matteuse kutsumine -->
           <div class="change-text-inf">
             <img
               src="img/matteuse.jpg"
               class="matteuse-img"
               alt="Püha Matteuse kutsumine"
             />
-          </div>
-          <div class="matteuse-text-change">
-            <p>Caravaggio,</p>
-            <a href="https://en.wikipedia.org/wiki/The_Calling_of_Saint_Matthew"
-              >"Püha Matteuse kutsumine"</a
-            >
+            <div class="matteuse-text-change">
+              <p>Caravaggio,</p>
+              <a
+                href="https://en.wikipedia.org/wiki/The_Calling_of_Saint_Matthew"
+                >"Püha Matteuse kutsumine"</a
+              >
+            </div>
           </div>
 
-          <!-- Charles I jahil -->
           <div class="change-text-inf">
             <img
               src="img/charles-I.jpg"
               class="charles-img"
               alt="Charles I jahil"
             />
-          </div>
-          <div class="charles-text-change">
-            <p>Anthony van Dyck,</p>
-            <a href="https://en.wikipedia.org/wiki/Charles_I_at_the_Hunt"
-              >"Charles I jahil"</a
-            >
+            <div class="charles-text-change">
+              <p>Anthony van Dyck,</p>
+              <a href="https://en.wikipedia.org/wiki/Charles_I_at_the_Hunt"
+                >"Charles I jahil"</a
+              >
+            </div>
           </div>
 
-          <!-- Torm Galilea järvel -->
           <div class="change-text-inf">
             <img
               src="img/torm.jpg"
               class="storm-img"
               alt="Torm Galilea järvel"
             />
-          </div>
-          <div class="storm-text-change">
-            <p>Rembrandt van Rijn,</p>
-            <a
-              href="https://en.wikipedia.org/wiki/The_Storm_on_the_Sea_of_Galilee"
-              >"Torm Galilea järvel"</a
-            >
+            <div class="storm-text-change">
+              <p>Rembrandt van Rijn,</p>
+              <a
+                href="https://en.wikipedia.org/wiki/The_Storm_on_the_Sea_of_Galilee"
+                >"Torm Galilea järvel"</a
+              >
+            </div>
           </div>
         </div>
       </section>
     </main>
+
+    <footer>
+      <p>Barokk-kunst &copy;2026, Kõik Õigused On Kaitstud</p>
+    </footer>
   </body>
 </html>

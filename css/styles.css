@@ -18,14 +18,19 @@
   --darker-variant-yellow: #b78113;
 }
 
-html,
-body {
-  font-family: "Vidaloka", "Asul";
-  line-height: 2em;
-  background-color: var(--bg-color);
+/* Juhend: Sujuv kerimine lehel */
+html {
+  scroll-behavior: smooth;
 }
 
-/* Sidebar menu */
+body {
+  font-family: "Vidaloka", "Asul", serif;
+  line-height: 2em;
+  background-color: var(--bg-color);
+  padding-left: 290px;
+}
+
+/* Sidebar*/
 .sidenav {
   height: 100%;
   width: 290px;
@@ -39,13 +44,19 @@ body {
   outline: 1px solid #584641;
 }
 
+.sidenav ul {
+  list-style: none;
+}
+
 .sidenav a {
-  padding: 6px 8px 6px 16px;
+  padding: 12px 16px;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 20px;
   color: #a39589;
   display: block;
-  font-family: "Vidaloka";
+  font-family: "Vidaloka", serif;
+  /* Animatsiooni üleminek */
+  transition: all 0.3s ease;
 }
 
 .sidenav h3 {
@@ -54,11 +65,15 @@ body {
   font-size: 24px;
   color: #a39589;
   display: block;
-  font-family: "Vidaloka";
+  font-family: "Vidaloka", serif;
 }
 
-.sidenav a:hover {
+/* Hover efektid menüüs */
+.sidenav a:hover,
+.sidenav a.current {
   color: var(--text-color);
+  background-color: #584641;
+  padding-left: 24px;
 }
 
 .sidenav h3:hover {
@@ -80,247 +95,631 @@ body {
   letter-spacing: 2px;
 }
 
-/* Sissejuhatuse kast kollase tausta ja kirjastiiliga */
-.introduction-box h3 {
-  width: 900px;
-  height: 100px;
-  padding: 25px;
-  border: 3px solid var(--darker-variant-yellow);
-  margin: 80px 0px 0px 460px;
-  background-color: var(--accent-col-yellow);
-  color: var(--primary-color);
-  font-family: "Vidaloka";
-  font-size: 36px;
+/* Elementide ilmumise animatsioon */
+main section {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Puhta ja organiseeritud paigutuse loomine gridi abil */
+.importance-box,
+.influence-box {
+  max-width: 1440px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.introduction-box {
+  max-width: 100%;
+}
+
+.introduction-box h3,
+.history-box h3,
+.traits-box h3,
+.influence-box h3 {
+  padding: 15px;
+  font-family: "Vidaloka", serif;
+  font-size: 32px;
   text-align: center;
   letter-spacing: 2px;
 }
 
-.introduction-box p {
-  width: 900px;
-  height: auto;
-  padding: 35px;
+.introduction-box h3 {
   border: 3px solid var(--darker-variant-yellow);
-  margin: 80px 0px 0px 460px;
   background-color: var(--accent-col-yellow);
   color: var(--primary-color);
-  font-family: "Asul";
-  font-size: 24px;
-  text-align: left;
-  letter-spacing: 2px;
 }
 
-/* Piltide paigutamine ning viidete alla lisamine gridi abil*/
-.container-images-int {
+.introduction-box p {
+  padding: 25px;
+  border: 3px solid var(--darker-variant-yellow);
+  background-color: var(--accent-col-yellow);
+  color: var(--primary-color);
+  font-family: "Asul", sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* ==========================================
+   AVALEHE 1. SAKK: Sissejuhatus (.layout-grid-int)
+   ========================================== */
+.layout-grid-int {
   display: grid;
-  grid-template-columns: repeat(3, 3fr);
-  gap: 100px;
-  margin-left: 460px;
-  margin-top: -545px;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1440px;
+  margin: 80px auto;
+  padding: 0 20px;
   align-items: start;
 }
 
-.change-text-int {
-  display: flex;
-  flex-direction: column;
+.container-images-int {
+  display: contents;
 }
 
-.change-text-int img {
-  width: 900px;
-  height: 550px;
-  border-radius: 10px;
+.introduction-box {
+  grid-column: 1;
+  grid-row: 1;
 }
 
-.pieta-text-change,
-.orph-eury-text-change,
-.river-text-change {
-  margin-top: 5px;
-  text-align: left;
-}
-
-/* Viited, linkide ja värvidega */
-.pieta-text-change {
-  color: var(--accent-col-yellow);
-}
-
-.pieta-text-change a {
-  color: var(--darker-variant-yellow);
-}
-
-.orph-eury-text-change {
-  color: var(--accent-col-red);
-}
-
-.orph-eury-text-change a {
-  color: var(--darker-variant-red);
-}
-
-.river-text-change {
-  color: var(--accent-col-green);
-}
-
-.river-text-change a {
-  color: var(--darker-variant-green);
-}
-
-/* Pieta üleval paremal */
 .change-text-int:nth-child(1) {
   grid-column: 2;
   grid-row: 1;
 }
 
-/* Orpheus all vasakul */
 .change-text-int:nth-child(2) {
   grid-column: 1;
   grid-row: 2;
 }
 
-/* River all paremal */
 .change-text-int:nth-child(3) {
   grid-column: 2;
   grid-row: 2;
 }
 
-/* Piltide suuruste lisamine */
-
-.mourning-christ-img {
-  width: 800px;
-  height: 558px;
+/* ==========================================
+   AVALEHE 2. SAKK: Ajalugu (.layout-grid-his)
+   ========================================== */
+.layout-grid-his {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1440px;
+  margin: 80px auto;
+  padding: 0 20px;
+  align-items: stretch;
 }
-
-.land-orph-eury-img {
-  width: 900px;
-  height: 518px;
-}
-
-.river-landscape-img {
-  width: 800px;
-  height: 518px;
-}
-
-/* Ajaloo kast rohelise tausta ja kirjastiiliga */
-.history-box h3 {
-  width: 900px;
-  height: 100px;
-  padding: 25px;
-  border: 3px solid var(--darker-variant-green);
-  margin: 80px 0px 0px 1455px;
-  background-color: var(--accent-col-green);
-  color: var(--text-color);
-  font-family: "Vidaloka";
-  font-size: 36px;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-.history-box p {
-  width: 900px;
-  height: auto;
-  padding: 35px;
-  border: 3px solid var(--darker-variant-green);
-  margin: 100px 0px 0px 1455px;
-  background-color: var(--accent-col-green);
-  color: var(--text-color);
-  font-family: "Asul";
-  font-size: 24px;
-  text-align: left;
-  letter-spacing: 2px;
-}
-
-/* Pildid jaa tekst paigutatud grid süsteemi */
 
 .container-images-his {
-  display: grid;
-  grid-template-columns: repeat(2, 3fr);
-  gap: 100px;
-  margin-left: 525px;
-  margin-top: -800px;
-  padding: 0px 0px 80px 0px;
-  align-items: start;
+  display: contents;
 }
 
-.change-text-his {
-  display: flex;
-  flex-direction: column;
-}
-
-.change-text-his img {
-  border-radius: 10px;
-}
-
-.mary-text-change,
-.banquet-text-change {
-  margin-top: 5px;
-  text-align: left;
-}
-
-/* Viited linkide ja värvidega */
-.banquet-text-change {
-  color: var(--accent-col-red);
-}
-
-.banquet-text-change a {
-  color: var(--darker-variant-red);
-}
-
-.mary-text-change {
-  color: var(--accent-col-yellow);
-}
-
-.mary-text-change a {
-  color: var(--darker-variant-yellow);
-}
-
-/* Banquet all vasakul */
-.change-text-his:nth-child(1) {
+.change-text-his:nth-child(2) {
   grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.history-box {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  margin: 0;
+}
+
+.change-text-his:nth-child(1) {
+  grid-column: 2;
   grid-row: 2;
 }
 
-/* Mary Üleval vasakul */
-.change-text-his:nth-child(2) {
+/* ==========================================
+   TUNNUSTE LEHE UUENDUS: Muudetud proportionsioonidega võrgustik
+   ========================================== */
+.layout-grid-tra {
+  display: grid;
+  grid-template-columns: 1.5fr 0.9fr 1.6fr;
+  gap: 40px;
+  max-width: 1440px;
+  margin: 60px auto;
+  padding: 0 20px;
+  align-items: stretch;
+}
+
+.container-images-tra {
+  display: contents;
+}
+
+/* Skeemil Vasakul: Tunnuste suur tekstikast */
+.traits-box {
   grid-column: 1;
+  grid-row: 1 / span 2;
+  width: 100%;
+  margin: 0;
+}
+
+/* Skeemil Keskel Üleval: Saabiini naised */
+.change-text-tra:nth-child(1) {
+  grid-column: 2;
   grid-row: 1;
 }
 
-/* Piltide suuruste lisamine */
-
-.mary-img {
-  width: 700px;
-  height: 800px;
+/* Skeemil Keskel All: Kosjasobitaja */
+.change-text-tra:nth-child(2) {
+  grid-column: 2;
+  grid-row: 2;
 }
 
-.banquet-img {
-  width: 900px;
-  height: 518px;
+/* Skeemil Paremal: Kiik */
+.change-text-tra:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1 / span 2;
 }
 
-/* footeri tekst,tumepruuni taustaga */
+/* ==========================================
+   KAARTIDE JA PILTIDE BAASTIILID
+   ========================================== */
+.change-text-int,
+.change-text-his,
+.change-text-tra,
+.change-text-art,
+.change-text-imp,
+.change-text-inf {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  height: 100%;
+}
+
+/* Hover efektid piltidele */
+.change-text-int:hover,
+.change-text-his:hover,
+.change-text-tra:hover,
+.change-text-art:hover,
+.change-text-imp:hover,
+.change-text-inf:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Piltide paindlik seadistus ruumi täitmiseks */
+.change-text-int img,
+.change-text-his img,
+.change-text-tra img,
+.change-text-art img,
+.change-text-imp img,
+.change-text-inf img {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  flex-grow: 4;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Pildi alamtekstid on kaardi põhjas */
+.pieta-text-change,
+.orph-eury-text-change,
+.river-text-change,
+.mary-text-change,
+.banquet-text-change,
+.sabine-text-change,
+.procuress-text-change,
+.swing-text-change {
+  margin-top: auto;
+  padding-top: 12px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Viited, linkide ja värvidega */
+.pieta-text-change {
+  color: var(--darker-variant-yellow);
+}
+.pieta-text-change a {
+  color: var(--accent-col-red);
+  font-weight: bold;
+}
+
+.orph-eury-text-change {
+  color: var(--darker-variant-red);
+}
+.orph-eury-text-change a {
+  color: var(--accent-col-red);
+  font-weight: bold;
+}
+
+.river-text-change {
+  color: var(--darker-variant-green);
+}
+.river-text-change a {
+  color: var(--accent-col-green);
+  font-weight: bold;
+}
+
+/* ==========================================
+   AJALOO SISU KUJUNDUS (Roheline)
+   ========================================== */
+.history-box h3 {
+  border: 3px solid var(--darker-variant-green);
+  background-color: var(--accent-col-green);
+  color: var(--text-color);
+}
+
+.history-box p {
+  padding: 25px;
+  border: 3px solid var(--darker-variant-green);
+  background-color: var(--accent-col-green);
+  color: var(--text-color);
+  font-family: "Asul", sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.banquet-text-change {
+  color: var(--darker-variant-red);
+}
+.banquet-text-change a {
+  color: var(--accent-col-red);
+  font-weight: bold;
+}
+
+.mary-text-change {
+  color: var(--darker-variant-yellow);
+}
+.mary-text-change a {
+  color: var(--accent-col-yellow);
+  font-weight: bold;
+}
+
+/* ==========================================
+   TUNNUSTE SISU KUJUNDUS (Punane)
+   ========================================== */
+.traits-box h3 {
+  border: 3px solid var(--darker-variant-red);
+  background-color: var(--accent-col-red);
+  color: var(--text-color);
+}
+
+.traits-box p {
+  padding: 25px;
+  border: 3px solid var(--darker-variant-red);
+  background-color: var(--accent-col-red);
+  color: var(--text-color);
+  font-family: "Asul", sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.sabine-text-change a {
+  color: var(--darker-variant-red);
+  font-weight: bold;
+}
+.procuress-text-change a {
+  color: var(--darker-variant-yellow);
+  font-weight: bold;
+}
+.swing-text-change a {
+  color: var(--darker-variant-green);
+  font-weight: bold;
+}
+
+/* ==========================================
+   UUS KUNSTNIKE SECTION - SKEEMI JÄRGI (Kollane)
+   ========================================== */
+.artists-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1440px;
+  margin: 40px auto 80px auto;
+  padding: 0 20px;
+}
+
+.artist-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.artist-name-tag p {
+  padding: 15px;
+  border: 3px solid var(--darker-variant-yellow);
+  background-color: var(--accent-col-yellow);
+  color: var(--primary-color);
+  font-family: "Asul", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 6px;
+  margin: 0;
+  line-height: 1.2em;
+}
+
+.artists-grid-layout .change-text-art img {
+  height: 320px;
+  object-fit: cover;
+}
+
+/* ==========================================
+   MÕJU SEKTSOONI PILTIDE GRID (Alumine rida)
+   ========================================== */
+.container-images-inf {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1440px;
+  margin: 40px auto 80px auto;
+  padding: 0 20px;
+}
+
+/* Mõju sektsiooni kasti stiilid (Roheline nagu ajalugu) */
+.influence-box h3 {
+  border: 3px solid var(--darker-variant-green);
+  background-color: var(--accent-col-green);
+  color: var(--text-color);
+}
+.influence-box p {
+  padding: 25px;
+  border: 3px solid var(--darker-variant-green);
+  background-color: var(--accent-col-green);
+  color: var(--text-color);
+  font-family: "Asul", sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* ==========================================
+   SPETSIIFILINE SKEEMI DISAIN: TÄHTSUSE SEKTSIOON
+   ========================================== */
+.importance-section-layout {
+  max-width: 1440px;
+  margin: 40px auto 60px auto;
+  padding: 0 20px;
+}
+
+/* Joonisel üleval keskel asuv roheline tekstikast */
+.importance-box-green {
+  max-width: 1440px;
+  margin: 0 auto 50px auto; /* Keskasendisse lükkamine */
+}
+.importance-box-green h3 {
+  padding: 15px;
+  font-family: "Vidaloka", serif;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 2px;
+  border: 3px solid var(--darker-variant-green);
+  background-color: var(--accent-col-green);
+  color: var(--text-color);
+}
+.importance-box-green p {
+  padding: 25px;
+  border: 3px solid var(--darker-variant-green);
+  background-color: var(--accent-col-green);
+  color: var(--text-color);
+  font-family: "Asul", sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* Alumine piltide rida (3 tulpa) */
+.importance-images-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* KESKMISE PILDI TRIPP: Surume Õuedaamid keskele madalaks */
+.meninas-card {
+  align-self: center;
+  height: auto !important;
+}
+.meninas-card img {
+  height: 280px !important;
+}
+
+/* ÄÄRMISED PIKAD PILDID: Juudit ja Ristilt mahavõtmine */
+.judith-card img,
+.descent-card img {
+  height: 460px !important;
+}
+
+/* ==========================================
+   TEKSTID JA ROHELISED LINKIDE VÄRVID (Tähtsus & Mõju)
+   ========================================== */
+.judith-text-change,
+.christ-text-change,
+.meninas-text-change,
+.matteuse-text-change,
+.charles-text-change,
+.storm-text-change {
+  text-align: center;
+  padding-top: 12px;
+  margin-top: auto;
+  font-size: 16px;
+}
+
+.judith-text-change p,
+.christ-text-change p,
+.meninas-text-change p,
+.matteuse-text-change p,
+.charles-text-change p,
+.storm-text-change p {
+  color: var(--darker-variant-green);
+  margin: 0;
+}
+
+.judith-text-change a,
+.christ-text-change a,
+.meninas-text-change a,
+.matteuse-text-change a,
+.charles-text-change a,
+.storm-text-change a {
+  color: var(--accent-col-green);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.judith-text-change a:hover,
+.christ-text-change a:hover,
+.meninas-text-change a:hover,
+.matteuse-text-change a:hover,
+.charles-text-change a:hover,
+.storm-text-change a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   KUNSTNIKE LEHE TEKSTID (Rubens, Rembrandt jne)
+   ========================================== */
+.massacre-text-change a,
+.öine-text-change a,
+.holy-text-change a {
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.massacre-text-change {
+  color: var(--darker-variant-yellow);
+}
+.massacre-text-change a {
+  color: var(--accent-col-yellow);
+  font-weight: bold;
+}
+
+.öine-text-change {
+  color: var(--darker-variant-red);
+}
+.öine-text-change a {
+  color: var(--accent-col-red);
+  font-weight: bold;
+}
+
+.holy-text-change {
+  color: var(--darker-variant-yellow);
+}
+.holy-text-change a {
+  color: var(--accent-col-yellow);
+  font-weight: bold;
+}
+
+/* ==========================================
+   KONTAKTIVORM & FOOTER
+   ========================================== */
+.container-text-contact {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  background: var(--primary-color);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.container-text-contact h1 {
+  font-family: "Vidaloka", serif;
+  color: var(--bg-color);
+  margin-bottom: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-family: "Asul", sans-serif;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--bg-color);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 2px solid var(--bg-color);
+  border-radius: 6px;
+  font-family: "Asul", sans-serif;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-col-green);
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 14px;
+  background-color: var(--accent-col-green);
+  color: var(--text-color);
+  border: none;
+  border-radius: 6px;
+  font-family: "Vidaloka", serif;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--darker-variant-green);
+  color: #e3d9c5;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
 
 footer {
-  margin: 80px 0px -20px 0px;
+  margin-top: 80px;
 }
 
 footer p {
   width: 100%;
   border: 3px solid var(--primary-color);
   background-color: var(--primary-color);
-  padding: 35px 35px;
+  padding: 35px;
   font-family: "Vidaloka", serif;
   text-align: center;
-  font-size: 36px;
+  font-size: 28px;
   color: var(--text-color);
   letter-spacing: 2px;
 }
 
-/* - */
-/* - */
-/* - */
-
-/* Pealkiri- Tunnused ja Kunstnikud tumepruuni taustaga*/
 .title-box-t {
   width: 100%;
   background-color: var(--primary-color);
-  padding: 35px 35px;
+  padding: 35px;
 }
 
 .title-box-t h3 {
@@ -331,497 +730,15 @@ footer p {
   letter-spacing: 2px;
 }
 
-/* Tunnusete kast punase taustaga */
-.traits-box h3 {
-  width: 900px;
-  height: 100px;
-  padding: 25px;
-  border: 3px solid var(--darker-variant-red);
-  margin: 80px 0px 0px 460px;
-  background-color: var(--accent-col-red);
-  color: var(--text-color);
-  font-family: "Vidaloka";
-  font-size: 36px;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-.traits-box p {
-  width: 900px;
-  height: auto;
-  padding: 35px;
-  border: 3px solid var(--darker-variant-red);
-  margin: 80px 0px 0px 460px;
-  background-color: var(--accent-col-red);
-  color: var(--text-color);
-  font-family: "Asul";
-  font-size: 24px;
-  text-align: left;
-  letter-spacing: 2px;
-}
-
-/* Piltide paigutamine gridi põhjal */
-.container-images-tra {
-  display: grid;
-  grid-template-columns: repeat(3, 3fr);
-  gap: 80px;
-  margin-left: 1450px;
-  margin-top: -710px;
-  align-items: start;
-}
-
-.change-text-tra {
-  display: flex;
-  flex-direction: column;
-}
-
-.change-text-tra img {
-  border-radius: 10px;
-}
-
-.sabine-text-change,
-.procuress-text-change,
-.swing-text-change {
-  margin-top: 5px;
-  text-align: left;
-}
-
-/* Viited, linkide ja värvidega */
-.sabine-text-change {
-  color: var(--accent-col-yellow);
-}
-
-.sabine-text-change a {
-  color: var(--darker-variant-red);
-}
-
-.procuress-text-change {
-  color: var(--accent-col-red);
-}
-
-.procuress-text-change a {
-  color: var(--darker-variant-yellow);
-}
-
-.swing-text-change {
-  color: var(--accent-col-green);
-}
-
-.swing-text-change a {
-  color: var(--darker-variant-green);
-}
-
-/* Sabine */
-.change-text-tra:nth-child(1) {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-/* Procuress */
-.change-text-tra:nth-child(2) {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-/* Swing */
-.change-text-tra:nth-child(3) {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-/* Piltide suuruste lisamine */
-
-.sabines-img {
-  width: 400px;
-  height: 300px;
-}
-
-.procuress-img {
-  width: 400px;
-  height: 300px;
-}
-
-.swing-img {
-  margin-top: -410px;
-  width: 450px;
-  height: 672px;
-}
-
-/* Tunnusete kast kollase taustaga */
 .title-box-k h3 {
-  width: 1900px;
-  height: 100px;
-  padding: 35px;
+  max-width: 1440px;
+  padding: 20px;
   border: 3px solid var(--darker-variant-yellow);
   background-color: var(--accent-col-yellow);
-  margin: 80px 0px 0px 492.5px;
-  color: var(--text-color);
-  font-family: "Vidaloka";
-  font-size: 36px;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-.artist-box {
-  color: var(--text-color);
-  font-family: "Asul";
-  font-size: 24px;
-  text-align: left;
-  letter-spacing: 2px;
-}
-
-.artist-box {
-  display: grid;
-  grid-template-columns: repeat(3, 690px);
-  margin-left: 31px;
-  margin-top: 0px;
-  align-items: start;
-}
-
-.artist-box p {
-  width: 520.33px;
-  height: auto;
-  padding: 25px;
-  border: 3px solid var(--darker-variant-yellow);
-  margin: 80px 0px 0px 460px;
-  background-color: var(--accent-col-yellow);
-}
-
-/* Piltide gridi süsteemi paigutamine üksteise kõrvale */
-
-.container-images-art {
-  display: grid;
-  grid-template-columns: repeat(3, 690px);
-  margin: 80px 0px 0px 490px;
-}
-
-.change-text-art {
-  display: flex;
-  flex-direction: column;
-}
-
-.change-text-art img {
-  margin: 80px 0px 0px 0px;
-  border-radius: 10px;
-  box-shadow: 0px 5px 20px var(--primary-color);
-}
-
-.massacre-text-change,
-.öine-text-change,
-.holy-text-change {
-  margin-top: 5px;
-  text-align: left;
-}
-
-/* Viited, linkide ja värvidega */
-.massacre-text-change {
-  color: var(--accent-col-yellow);
-}
-
-.massacre-text-change a {
-  color: var(--darker-variant-yellow);
-}
-
-.öine-text-change {
-  color: var(--accent-col-red);
-}
-
-.öine-text-change a {
-  color: var(--darker-variant-red);
-}
-
-.holy-text-change {
-  color: var(--accent-col-yellow);
-}
-
-.holy-text-change a {
-  color: var(--darker-variant-yellow);
-}
-
-/* Piltide suuruste lisamine */
-
-.veresaun-img {
-  width: 520.33px;
-  height: 358px;
-}
-
-.night-img {
-  width: 520.33px;
-  height: 398px;
-}
-
-.family-img {
-  width: 520.33px;
-  height: 348px;
-}
-
-/* - */
-/* - */
-/* - */
-
-/* Pealkiri- Tähtsus ja Mõju tumepruuni taustaga*/
-.title-box-t {
-  width: 100%;
-  background-color: var(--primary-color);
-  padding: 35px 35px;
-}
-
-.title-box-t h3 {
+  margin: 100px auto 20px auto;
+  color: var(--primary-color);
   font-family: "Vidaloka", serif;
+  font-size: 32px;
   text-align: center;
-  font-size: 36px;
-  color: var(--text-color);
-  letter-spacing: 2px;
-}
-
-/* Tähtsuse kast punase taustaga */
-.importance-box h3 {
-  width: 900px;
-  height: 100px;
-  padding: 25px;
-  border: 3px solid var(--darker-variant-red);
-  margin: 80px 0px 0px 460px;
-  background-color: var(--accent-col-red);
-  color: var(--text-color);
-  font-family: "Vidaloka";
-  font-size: 36px;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-.importance-box p {
-  width: 900px;
-  height: auto;
-  padding: 35px;
-  border: 3px solid var(--darker-variant-red);
-  margin: 80px 0px 0px 460px;
-  background-color: var(--accent-col-red);
-  color: var(--text-color);
-  font-family: "Asul";
-  font-size: 24px;
-  text-align: left;
-  letter-spacing: 2px;
-}
-
-/* Piltide paigutamine gridi põhjal */
-.container-images-imp {
-  display: grid;
-  grid-template-columns: repeat(3, 3fr);
-  gap: 80px;
-  margin-left: 1450px;
-  margin-top: -710px;
-  align-items: start;
-}
-
-.change-text-imp {
-  display: flex;
-  flex-direction: column;
-}
-
-.change-text-imp img {
-  border-radius: 10px;
-}
-
-.judith-text-change,
-.christ-text-change,
-.meninas-text-change {
-  margin-top: 5px;
-  text-align: left;
-}
-
-/* Viited, linkide ja värvidega */
-.judith-text-change {
-  color: var(--accent-col-yellow);
-}
-
-.judith-text-change a {
-  color: var(--darker-variant-red);
-}
-
-.christ-text-change {
-  color: var(--accent-col-red);
-}
-
-.christ-text-change a {
-  color: var(--darker-variant-yellow);
-}
-
-.meninas-text-change {
-  color: var(--accent-col-green);
-}
-
-.meninas-text-change a {
-  color: var(--darker-variant-green);
-}
-
-/* Piltide suuruste lisamine */
-
-.judith-img {
-  width: 400px;
-  height: 300px;
-}
-
-.christ-img {
-  width: 400px;
-  height: 300px;
-}
-
-.meninas-img {
-  width: 450px;
-  height: 672px;
-}
-
-/* Mõju kast punase taustaga */
-.influence-box h3 {
-  width: 900px;
-  height: 100px;
-  padding: 25px;
-  border: 3px solid var(--darker-variant-red);
-  margin: 80px 0px 0px 460px;
-  background-color: var(--accent-col-red);
-  color: var(--text-color);
-  font-family: "Vidaloka";
-  font-size: 36px;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-.influence-box p {
-  width: 900px;
-  height: auto;
-  padding: 35px;
-  border: 3px solid var(--darker-variant-red);
-  margin: 80px 0px 0px 460px;
-  background-color: var(--accent-col-red);
-  color: var(--text-color);
-  font-family: "Asul";
-  font-size: 24px;
-  text-align: left;
-  letter-spacing: 2px;
-}
-
-/* Piltide paigutamine gridi põhjal */
-.container-images-inf {
-  display: grid;
-  grid-template-columns: repeat(3, 3fr);
-  gap: 80px;
-  margin-left: 1450px;
-  margin-top: -710px;
-  align-items: start;
-}
-
-.change-text-inf {
-  display: flex;
-  flex-direction: column;
-}
-
-.change-text-inf img {
-  border-radius: 10px;
-}
-
-.matteuse-text-change,
-.charles-text-change,
-.meninas-text-change {
-  margin-top: 5px;
-  text-align: left;
-}
-
-/* Viited, linkide ja värvidega */
-.matteuse-text-change {
-  color: var(--accent-col-yellow);
-}
-
-.matteuse-text-change a {
-  color: var(--darker-variant-red);
-}
-
-.charles-text-change {
-  color: var(--accent-col-red);
-}
-
-.charles-text-change a {
-  color: var(--darker-variant-yellow);
-}
-
-.meninas-text-change {
-  color: var(--accent-col-green);
-}
-
-.meninas-text-change a {
-  color: var(--darker-variant-green);
-}
-
-/* Piltide suuruste lisamine */
-
-.matteuse-img {
-  width: 400px;
-  height: 300px;
-}
-
-.charles-img {
-  width: 400px;
-  height: 300px;
-}
-
-.meninas-img {
-  width: 450px;
-  height: 672px;
-
-  /* - */
-  /* - */
-  /* - */
-}
-
-/* Formide juurde kastide lisamine */
-.container-text-contact h1 {
-  width: 100%;
-  background-color: var(--primary-color);
-  padding: 35px 35px;
-  margin-top: -33px;
-  font-family: "Vidaloka", serif;
-  text-align: center;
-  font-size: 36px;
-  color: var(--text-color);
-  letter-spacing: 2px;
-}
-
-.form-group {
-  margin: 30px 350px 20px 600px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 24px;
-}
-
-/* Ääriste tegemine, näidistele värvi andmine, teksti stiilimine  */
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--text-color);
-  border-radius: 10px;
-  background-color: var(--primary-color);
-  font-size: 24px;
-  font-family: "Asul";
-  color: var(--text-color);
-}
-
-.form-group textarea {
-  height: 570px;
-}
-
-.title-box-g {
-  width: 100%;
-  background-color: var(--primary-color);
-  padding: 35px 35px;
-}
-
-.title-box-g h3 {
-  font-family: "Vidaloka", serif;
-  text-align: center;
-  font-size: 36px;
-  color: var(--text-color);
   letter-spacing: 2px;
 }
