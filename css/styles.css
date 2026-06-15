@@ -738,3 +738,180 @@ footer {
   fill: var(--text-color); /* Alati sama toon mis tekstil */
   display: block;
 }
+
+/* Mobiilivaade iphone SE */
+@media screen and (max-width: 768px) {
+  
+  /* Arvutivaate vasaku nimekirja nihke eemaldamine */
+  body {
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 1.6em;
+  }
+
+  /* Muudan sidebari küljeriba ülemiseks reaks */
+  .sidenav {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    outline: none;
+    border-bottom: 3px solid var(--primary-color);
+  }
+
+  .sidenav h3 {
+    text-align: center;
+    font-size: 20px;
+    padding: 5px 0;
+  }
+
+  .sidenav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .sidenav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sidenav a {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  .sidenav a:hover,
+  .sidenav a.current {
+    padding-left: 0;
+  }
+
+  .title-box-sa, 
+  .title-box-t {
+    padding: 20px 15px;
+  }
+
+  .title-box-sa h3, 
+  .title-box-t h3 {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  /* 3. PEALKIRJAD (Tagasi toodud originaalstiilid, optimeeritud mobiilile) */
+  .introduction-box h3,
+  .history-box h3,
+  .traits-box h3,
+  .influence-box h3,
+  .importance-box-green h3,
+  .title-box-k h3 {
+    padding: 10px 15px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box ;
+  }
+
+  /* Kastide vahelised kohandused mobiilis */
+  .introduction-box p,
+  .history-box p,
+  .traits-box p,
+  .influence-box p,
+  .importance-box-green p {
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .title-box-k h3 {
+    margin: 30px auto 10px auto;
+  }
+
+  /* 4. Pilddie paigutatud üheveeruliselt gridi asemel */
+  .layout-grid-int,
+  .layout-grid-his,
+  .layout-grid-tra,
+  .artists-grid-layout,
+  .importance-images-grid,
+  .container-images-inf {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 15px;
+    margin: 30px auto;
+  }
+
+  /* Kontrollime elementide järjekorda: Tekstikast (koos pealkirjaga) alati enne pilte */
+  .layout-grid-int { display: flex; flex-direction: column; }
+  .introduction-box { order: 1; }
+  .change-text-int:nth-child(1) { order: 2; }
+  .change-text-int:nth-child(2) { order: 3; }
+  .change-text-int:nth-child(3) { order: 4; }
+
+  .layout-grid-his { display: flex; flex-direction: column; }
+  .history-box { order: 1; }
+  .change-text-his:nth-child(1) { order: 2; }
+  .change-text-his:nth-child(2) { order: 3; }
+
+  .layout-grid-tra { display: flex; flex-direction: column; }
+  .traits-box { order: 1; }
+  .change-text-tra:nth-child(1) { order: 2; }
+  .change-text-tra:nth-child(2) { order: 3; }
+  .change-text-tra:nth-child(3) { order: 4; }
+
+  .change-text-int,
+  .change-text-his,
+  .change-text-tra,
+  .change-text-art,
+  .change-text-imp,
+  .change-text-inf,
+  .artist-column {
+    width: 100%;
+    height: auto;
+    grid-column: span 1;
+  }
+
+  .change-text-int img,
+  .change-text-his img,
+  .change-text-tra img,
+  .change-text-art img,
+  .change-text-imp img,
+  .change-text-inf img,
+  .artists-grid-layout .change-text-art img,
+  .meninas-card img,
+  .judith-card img,
+  .descent-card img {
+    height: 220px;
+    min-height: auto;
+  }
+
+  .importance-box-green[style] { margin-top: 20px; }
+  .importance-section-layout[style] { margin-top: 20px; margin-bottom: 20px; }
+
+  .container-text-contact {
+    margin: 30px 15px;
+    padding: 20px;
+  }
+
+  .container-text-contact h1 {
+    font-size: 24px;
+  }
+
+  footer {
+    margin-top: 40px;
+    padding: 20px 15px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer-text {
+    font-size: 20px;
+  }
+}
